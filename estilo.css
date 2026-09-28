@@ -1,0 +1,211 @@
+/* Declaración de la fuente personalizada con un nombre sencillo */
+@font-face {
+    font-family: 'Mi_Fuente';
+    src: url('fonts/mifuente.woff2') format('woff2'),
+         url('fonts/mifuente.woff') format('woff');
+}
+
+:root {
+    --color-primario: #0a0b10;     
+    --color-secundario: #16192b;
+    --color-acento: #00ffcc;
+    --color-magenta: #b537f2;
+    --color-texto: #e2e8f0;
+    --color-blanco: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'MiFuente', Arial, sans-serif;
+    color: var(--color-texto);
+    background-image: url('imagenes/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--color-secundario);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.2);
+}
+
+/*Flexbox*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--color-primario);
+    border-bottom: 2px solid var(--color-magenta);
+}
+
+.logo-container .logo-img {
+    height: 45px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    margin-left: 20px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    background-color: var(--color-acento);
+    color: var(--color-primario);
+    box-shadow: 0 0 10px var(--color-acento);
+}
+
+.seccion-productos {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--color-secundario);
+}
+
+.seccion-productos h2 {
+    margin-bottom: 30px;
+    color: var(--color-acento);
+    text-shadow: 0 0 8px rgba(0, 255, 204, 0.4);
+}
+
+.productos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.producto-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background: var(--color-primario);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--color-magenta);
+    width: 250px;
+    transition: all 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-acento);
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.producto-card span {
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+.seccion-contenido {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+}
+
+.contenido-derecho {
+    background-color: var(--color-secundario);
+}
+
+.contenido-izquierdo {
+    background-color: #101322;
+}
+
+.contenido-imagen img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid var(--color-magenta);
+    transition: opacity 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contenido-imagen img:hover {
+    opacity: 0.85;
+    border-color: var(--color-acento);
+    box-shadow: 0 0 12px var(--color-acento);
+}
+
+.contenido-texto {
+    flex: 1;
+    line-height: 1.6;
+    text-align: justify;
+    color: var(--color-texto);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 30px 20px;
+    gap: 15px;
+    border-top: 2px solid var(--color-acento);
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 20px;
+}
+
+.redes-sociales a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 14px;
+    border: 1px solid var(--color-acento);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.redes-sociales a:hover {
+    background-color: var(--color-acento);
+    border-color: var(--color-acento);
+    color: var(--color-primario);
+    box-shadow: 0 0 10px var(--color-acento);
+}
+
+.nombre-autor {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--color-magenta);
+}
